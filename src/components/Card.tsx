@@ -1,9 +1,11 @@
-const Card = (props) => {  
+import { CardType } from "../types";
+
+const Card = ({allCountriesData}: CardType) => {  
   return (
-    <div>
+    <div className="card-container">
       <h2>Card</h2>
       <button>Get All Data</button>
-      {props.allCountriesData.map((singleData, index) => {
+      {allCountriesData.map((singleData, index) => {
         return (
           <div key={index}>
             <h2>{singleData.Country}</h2>
